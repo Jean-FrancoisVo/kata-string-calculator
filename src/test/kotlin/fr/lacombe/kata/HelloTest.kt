@@ -24,5 +24,6 @@ fun add(values: String): Int {
     if (values.isEmpty())
         return 0
     val split = values.split(",")
-    return if (split.size == 1) split[0].toInt() else split[0].toInt() + split[1].toInt()
+            .map { e -> e.toInt() }
+    return if (split.size == 1) split[0] else split[0] + split[1]
 }

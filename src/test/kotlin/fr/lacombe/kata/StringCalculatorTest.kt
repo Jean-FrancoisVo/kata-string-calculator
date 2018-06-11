@@ -27,10 +27,10 @@ class StringCalculatorTest {
     }
 }
 
-fun add(values: String): Int {
-    if (values.isEmpty())
-        return 0
-    return values.split(",")
-            .map { e -> e.toInt() }
-            .reduce { acc, n -> acc + n }
-}
+fun add(values: String): Int =
+        if (values.isEmpty())
+            0
+        else
+            values.split(",")
+                    .map { e -> e.toInt() }
+                    .reduce { acc, n -> acc + n }
